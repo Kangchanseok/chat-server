@@ -40,7 +40,7 @@ firebase init hosting
 firebase init functions
 ```
 - Language: javascript
-- Esling: N
+- Eslint: N
 
 ### Firebase Database 설정
 ```bash
@@ -52,9 +52,9 @@ firebase init database
 
 ### 프로젝트 구축
 - 참고 소스: https://raw.githubusercontent.com/okachijs/jsframeworkbook/master/2_5_server/functions/index.js
-- functions\index\.js
+- functions\index.js
 
-### 테스트 하기
+### 테스트 하기(서버켜기? ㅎㅎ)
 ```bash
 firebase serve --only functions
 ```
@@ -77,3 +77,8 @@ database.rule.json 파일을
 
 - git bash로 수행
 - curl -H 'Content-Type:application/json' -d '{"cname": "general"}' http://localhost:5000/chat-server-400d8/us-central1/v1/channels
+
+- curl -H 'Content-Type:application/json' -d '{"cname": "general"}' http://localhost:5000/{프로젝트ID}/us-central1/v1/channels
+curl http://localhost:5000/{프로젝트ID}/us-central1/v1/channels
+curl -H 'Content-Type:application/json' -d '{}' http://localhost:5000/{프로젝트ID}/us-central1/v1/reset
+
